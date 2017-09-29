@@ -10,7 +10,14 @@ from .serializers import AuthorSerializer
 from .models import Author
 
 class ListAuthor(APIView):
+    """
+        get:
+        Return a list of authors
 
+        post:
+        Create an author in scrarch
+    """
+    
     def get(self, request):
         authors = Author.objects.all() #querysets SELECT * FROM Author
         serializer  = AuthorSerializer(authors,many=True)
@@ -24,6 +31,8 @@ class ListAuthor(APIView):
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
+
 class DetailAuthor(APIView):
 
     def _getAuthor(self,pk):
@@ -33,7 +42,7 @@ class DetailAuthor(APIView):
         except Author.DoesNotExist:
             raise Http404
 
-    def get(self,request,pk):
+    def get(self, request, pk):
         author = self._getAuthor(pk)
         serializer = AuthorSerializer(author)        
         return Response(serializer.data, status = status.HTTP_200_OK)

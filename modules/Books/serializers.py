@@ -14,7 +14,7 @@ GENEROS = (
 
 
 class BookSerializer(serializers.ModelSerializer):
-    author = AuthorSerializer(read_only=True)
+    # author = AuthorSerializer(read_only=True)
     class Meta:
             model = Book
             fields = '__all__'
@@ -26,3 +26,5 @@ class QueryBookSerializer(serializers.Serializer):
     literary_genre = serializers.ChoiceField(choices=GENEROS,required=False)
     raiting = serializers.DecimalField(max_digits=3,decimal_places=2, required=False)
     #raiting_lte = serializers.DecimalField(max_digits=3,decimal_places=2, required=False)
+    
+

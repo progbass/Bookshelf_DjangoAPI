@@ -1,9 +1,10 @@
-from django.conf.urls import include,url
+from django.conf.urls import include, url
 from django.contrib import admin
 #from .views import ListBook,DetailBook
-from .generic_view import ListBook,DetailBook
+from .generic_view import ListBook, DetailBook, UpdateBookCover
 
 urlpatterns = [
     url(r'^$', ListBook.as_view()),
     url(r'^(?P<pk>[0-9]+)/$', DetailBook.as_view()),
+    url(r'^cover/$', UpdateBookCover.as_view())
 ]

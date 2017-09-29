@@ -15,7 +15,7 @@ GENEROS = (
 
 class Book(models.Model):
     id = models.AutoField(primary_key=True)
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, help_text='Este es el título del libro')
     author = models.ForeignKey(
         Author, on_delete=models.CASCADE, related_name='books')
     isbn = models.CharField(max_length=100)

@@ -43,6 +43,8 @@ class ListBook(APIView):
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
+
 class DetailBook(APIView):
 
     def _getBook(self,pk):

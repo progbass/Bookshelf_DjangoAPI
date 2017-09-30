@@ -48,7 +48,7 @@ class ListBook(generics.ListCreateAPIView): # GET y POST
 	filter_backends = (filters.SearchFilter,DjangoFilterBackend)
 	filter_fields = ('raiting', 'date_published', 'price', 'literary_genre')
 	search_fields = ('title', 'prologue', 'literary_genre')
-	permission_classes = (IsAuthenticated, TokenHasReadWriteScope)
+	#permission_classes = (IsAuthenticated, TokenHasReadWriteScope)
 
 	def create(self, request):
 		try:
@@ -66,8 +66,8 @@ class ListBook(generics.ListCreateAPIView): # GET y POST
 
 
 class DetailBook(generics.RetrieveUpdateDestroyAPIView):# GET,PUT,DELETE,PATCH
-	permission_classes = (IsAuthenticated, TokenHasScope)
-	required_scopes = ['write']
+	#permission_classes = (IsAuthenticated, TokenHasScope)
+	#required_scopes = ['write']
 	serializer_class = BookSerializer
 	queryset = Book.objects.all() 
 

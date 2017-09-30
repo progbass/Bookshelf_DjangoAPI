@@ -93,7 +93,7 @@ DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
        'NAME': 'goodreads',
-       'USER': 'new_role',
+       'USER': 'progbass',
        'PASSWORD': 'inflames12',
        'HOST': 'localhost',
        'PORT': '5432'
@@ -124,7 +124,7 @@ AUTH_USER_MODEL = "Users.User"
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
+        #'rest_framework.permissions.IsAuthenticated',
         'rest_framework.permissions.AllowAny',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (

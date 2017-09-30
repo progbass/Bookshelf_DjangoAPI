@@ -12,5 +12,4 @@ DATABASES = dict()
 DATABASES['default'] = dj_database_url.config() # <--- Heroku Only Configuration
 SESSION_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https://')
 STATIC_ROOT = os.path.join(os.getcwd(), 'static')
-afternoon-woodland-60928
 

@@ -1,4 +1,6 @@
 from .base import *
+import os
+import dj_databases_url
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'oji_onyq4-^h10+ho9%7r7mf-6fv7q+!wrzp65co8)5w^)!!dh'

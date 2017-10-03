@@ -8,8 +8,16 @@ DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 # Database
-DATABASES = dict()
-DATABASES['default'] = dj_database_url.config() # <--- Heroku Only Configuration
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.getenv('DBNAME',''),
+        'USER': os.getenv('DBUSER',''),
+        'PASSWORD': os.getenv('DBPASSWORD',''),
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 SESSION_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https://')
 STATIC_ROOT = os.path.join(os.getcwd(), 'static')
 

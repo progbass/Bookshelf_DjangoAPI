@@ -7,7 +7,7 @@ from rest_framework.documentation import include_docs_urls
 
 urlpatterns = [
     # Examples:
-    url(r'^$', 'modules.views.home', name='home'), 
+    #url(r'^$', 'modules.views.home', name='home'), 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/v1/authors/', include('modules.Authors.urls')),
     url(r'^api/v1/books/', include('modules.Books.urls', namespace="books")), 

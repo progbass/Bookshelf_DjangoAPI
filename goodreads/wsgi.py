@@ -8,6 +8,7 @@ https://docs.djangoproject.com/en/1.8/howto/deployment/wsgi/
 """
 from django.core.wsgi import get_wsgi_application
 from dotenv import load_dotenv
+import os
 #from whitenoise.django import DjangoWhiteNoise	
 
 try:
@@ -17,7 +18,7 @@ except:
     pass
 
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "goodreads.settings.production")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "goodreads.settings.local")
 application = get_wsgi_application()
 # application = DjangoWhiteNoise(application)
 

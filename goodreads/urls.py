@@ -5,9 +5,11 @@ from django.contrib import admin
 from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token, verify_jwt_token
 from rest_framework.documentation import include_docs_urls
 
+from modules.Home.views import index
+
 urlpatterns = [
     # Examples:
-    #url(r'^$', 'modules.views.home', name='home'), 
+    url(r'^$', index), 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/v1/authors/', include('modules.Authors.urls')),
     url(r'^api/v1/books/', include('modules.Books.urls', namespace="books")), 

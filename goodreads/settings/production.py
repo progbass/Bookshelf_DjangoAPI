@@ -18,6 +18,6 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-SESSION_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https://')
+# SESSION_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https://')
 STATIC_ROOT = os.path.join(os.getcwd(), 'static')
 

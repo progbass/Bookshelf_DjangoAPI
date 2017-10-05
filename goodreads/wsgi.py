@@ -18,7 +18,7 @@ except:
     pass
 
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "goodreads.settings.local")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "goodreads.settings.production")
 application = get_wsgi_application()
 # application = DjangoWhiteNoise(application)
 

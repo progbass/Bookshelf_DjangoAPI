@@ -126,14 +126,4 @@ MEDIA_ROOT = os.path.join(os.getcwd(), 'media')
 MEDIA_URL = "/media/"
 
 
-CORS_ALLOW_METHODS = (
-    'DELETE',
-    'GET',
-    'OPTIONS',
-    'PATCH',
-    'POST',
-    'PUT',
-)
-CORS_ORIGIN_ALLOW_ALL=True
-
 

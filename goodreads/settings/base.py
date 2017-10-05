@@ -127,12 +127,12 @@ MEDIA_URL = "/media/"
 
 
 CORS_ALLOW_METHODS = (
-    ‘DELETE’,
-    ‘GET’,
-    ‘OPTIONS’,
-    ‘PATCH’,
-    ‘POST’,
-    ‘PUT’,
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
 )
 CORS_ORIGIN_ALLOW_ALL=True
 
